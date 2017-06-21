@@ -362,7 +362,8 @@ footer{
                     border-left:2px solid @white;
                     flex-grow: 1;
                     margin: 12px 0 0 5px;
-
+                    -webkit-appearance: none;
+                    border-radius: 0;
                 }
                 input[type="image"]{
                     margin: 12px 6px 0 8px;
@@ -379,6 +380,9 @@ footer{
                 .phone{
                     display:inline-flex;
                     margin:0 0 3px 0;
+                    @media(max-width:800px){
+                        margin-right:3px;
+                    }
                     .fa-mobile{
                         font-size:28px;
                         color:#22afe2;
@@ -517,10 +521,10 @@ h3.title-rubrics{
     color:@green;
     padding:1px 0 0 21px;
     position:relative;
-    @media(min-width:1366px){
+    @media(min-width:1280px){
         font-size: 1.2vw;
     }
-    @media(max-width:1365px){
+    @media(max-width:1280px){
         font-size:20px;
     }
 }
@@ -641,6 +645,11 @@ h3.red-title.corner{
         @media(max-width:768px){
             padding:10px 0 0 ;
         }
+        a{
+            @media(max-width:768px){
+                font-size:16px;
+            }
+        }
     }
 }
 .all-articles{
@@ -649,8 +658,6 @@ h3.red-title.corner{
     .top-articles{
         display: flex;
         padding: 42px 0 36px 0;
-
-
         a{
             text-decoration: underline;
             color:@black;
@@ -701,19 +708,18 @@ h3.red-title.corner{
         .news-main{
             display: flex;
             background-image: linear-gradient(to left, #232629 0%, #34393d 100%);
-            @media(max-width:1366px){
+            @media(max-width:1280px){
                 flex-direction:column;
             }
             .news-list{
                 position: relative;
                 width:39.4%;
-                background-image: linear-gradient(to left, #232629 0%, #34393d 100%);
+
                 @media(max-width:1600px){
                     width:40%;
                 }
-                @media(max-width:1366px){
+                @media(max-width:1280px){
                     width:100%;
-                    padding: 30px 0 0 10px;
                 }
                 .title-rubrics{
                     position: absolute;
@@ -721,10 +727,16 @@ h3.red-title.corner{
                     left: -1px;
                     padding: 0 22px 0 22px;
                     width: 48%;
-                    @media(max-width:1366px){
+                    @media(max-width:1280px){
                         top:0;
                         left:10px;
-                        width:100%;
+                        z-index:1000;
+                        width:400px;
+                    }
+                     @media(max-width:480px){
+                        width:250px;
+                        max-width:250px;
+                        font-size:18px;
                     }
                 }
                 ul{
@@ -733,12 +745,14 @@ h3.red-title.corner{
                     @media(max-width:1600px){
                         max-width:100%;
                     }
-                    @media(max-width:1366px){
-                        padding-left:0;
+                    @media(max-width:1280px){
+                        display:flex;
+                        flex-direction:column;
+                        padding-top:88px;
                     }
                     li{
                         @media(max-width:1366px){
-                            width:100%;
+
                         }
                         time{
                             color: #999;
@@ -754,12 +768,11 @@ h3.red-title.corner{
             }
             .slider-news{
                 width:61.5%;
-                background-image: linear-gradient(to left, #232629 0%, #34393d 100%);
                 position:relative;
                 @media(max-width:1600px){
                     width:60%;
                 }
-                @media(max-width:1366px){
+                @media(max-width:1280px){
                     width:100%;
                 }
                 .title-rubrics{
@@ -767,11 +780,14 @@ h3.red-title.corner{
                     top: -44px;
                     left: 30.7%;
                     padding: 0 24px 0 19px;
-                    @media(max-width:1366px){
+                    @media(max-width:1280px){
                         left:10px;
-                        top:0;
                         z-index:1000;
-                        display:none;
+                    }
+                    @media(max-width:480px){
+                        width:250px;
+                        max-width:250px;
+                        font-size:18px;
                     }
                 }
                 img{
@@ -784,16 +800,20 @@ h3.red-title.corner{
                     z-index: 100000;
                     left: 31.6%;
                     @media(max-width:1366px){
-                        left:5%;
+                        left:25%;
                     }
                     @media(max-width:480px){
                         bottom:30px;
+                        left:10%;
                     }
                     .lbl-date{
                         width: 104px;
                         height: 26px;
                         font-size: 16px;
                         margin: 0 0 9px -9px;
+                        @media(max-width:480px){
+                            margin:0 0 0 -7px;
+                        }
                     }
                     a{
                         color: white;
@@ -820,7 +840,7 @@ h3.red-title.corner{
         }
         .news-popular{
             display:flex;
-            @media(max-width:1366px){
+            @media(max-width:1280px){
                 flex-direction:column;
             }
             .gallery-news-wrap{
@@ -831,7 +851,8 @@ h3.red-title.corner{
                 @media(max-width:1600px){
                     width:60%;
                 }
-                @media(max-width:1366px){
+
+                @media(max-width:1280px){
                     width:100%;
                 }
                 .gallery-news{
@@ -853,8 +874,8 @@ h3.red-title.corner{
                         @media(max-width:1600px){
                             width:32%;
                         }
-                        @media(max-width:1366px){
-                            width:24.4%;
+                        @media(max-width:1280px){
+                            width:24%;
                         }
                         @media(max-width:991px){
                             width:32%;
@@ -881,10 +902,10 @@ h3.red-title.corner{
                 width:39.4%;
                 background-color: #d3dbe2;
                 @media(max-width:1600px){
-                    width: 41.7%;
+                    width: 40%;
                 }
-                @media(max-width:1366px){
-                    width:100%;
+                @media(max-width:1280px){
+                    width:100%; 
 
                 }
                 .title-rubrics{
@@ -892,8 +913,12 @@ h3.red-title.corner{
                     color:@white;
                     max-width: 50.4%;
                     padding: 0 0 0 24px;
-                    @media(max-width:1366px){
-                        max-width:100%;
+                    width:399px;
+                    max-width:399px;
+                    @media(max-width:480px){
+                        width:300px;
+                        max-width:300px;
+                        font-size:18px;
                     }
                 }
                 ul{
@@ -903,14 +928,15 @@ h3.red-title.corner{
                         max-width:100%;
 
                     }
-                    @media(max-width:1366px){
-                        padding-left:10px;
+                    @media(max-width:1280px){
+                        display:flex;
+                        flex-direction:column;
                     }
 
 
                     li{
                         @media(max-width:1366px){
-                            width:100%;
+
                         }
                         time{
                             color:#666;
@@ -998,8 +1024,7 @@ h3.red-title.corner{
                     }
                     .news-title{
                         a{
-                            color: #202020;
-                            font-size: 14px;
+                            color:@black;
                         }
                     }
                 }
@@ -1052,9 +1077,11 @@ h3.red-title.corner{
                         top: -44px;
                         padding: 0 19px 0 22px;
                         z-index: 100;
-                        @media(max-width:1200px){
-                            left:-10px;
-                            width:100%;
+                        width:348px;
+                        max-width:348px;
+                        @media(max-width:1280px){
+                            left:0;
+                            max-width:270px;
 
                         }
 
@@ -1232,6 +1259,14 @@ h3.red-title.corner{
                 @media(max-width:991px){
                     width:100%;
                     margin:0 0 20px 0;
+                }
+                .title-rubrics{
+                    width:399px;
+                    max-width:399px;
+                    @media(max-width:991px){
+                        max-width:280px;
+                        width:280px;
+                    }
                 }
                 .questions{
                     color: #262626;
@@ -1488,7 +1523,6 @@ h3.red-title.corner{
                         }
                         a{
                             color: @black;
-                            font-size: 14px;
                         }
                     }
                 }
@@ -1833,6 +1867,7 @@ h3.red-title.corner{
                             color:@white;
                             i{
                                 margin: 0 11px 0 11px;
+
                             }
                         }
                     }
@@ -1855,6 +1890,9 @@ h3.red-title.corner{
                             flex-shrink: 0;
                             @media(max-width:768px){
                                 margin:0 10px 10px 10px;
+                            }
+                            @media(max-width:480px){
+                                display:none;
                             }
                         }
                         h4{
@@ -1903,6 +1941,7 @@ h3.red-title.corner{
                         bottom: 21px;
                         @media(max-width:768px){
                             bottom:5px;
+                            padding:5px 0 0 8px;
                         }
                         h4{
                             @media(max-width:992px){
@@ -1927,7 +1966,7 @@ h3.red-title.corner{
                     }
 
                     .article-news{
-                        margin: 0 0 12px;
+                        margin: 0 0 15px;
                         .description-news{
                             bottom: 10px;
                             padding: 0 0 0 7px;
@@ -1973,7 +2012,6 @@ h3.red-title.corner{
                 .news-title{
                     a{
                         color: @black;
-                        font-size: 14px;
                     }
                 }
             }
@@ -2160,7 +2198,7 @@ h3.red-title.corner{
                 background:#fff;
                 @media(max-width:1100px){
                     width:100%;
-                    padding:45px 0 0;
+                    padding:75px 0 0;
                     display:flex;
                     justify-content:space-between;
                 }
@@ -2173,6 +2211,14 @@ h3.red-title.corner{
                     }
                     @media(max-width:480px){
                         width:100%;
+                    }
+                    h3{
+                        @media(max-width:1100px){
+                            max-width:388px;
+                        }
+                        @media(max-width:640px){
+                            max-width:280px;
+                        }
                     }
                     .news-list{
                         padding: 30px 0 0 15px;
@@ -2284,6 +2330,9 @@ h3.red-title.corner{
                             font-family: Proxima Nova Light;
                             color:@black;
                             padding: 6px 30px 0 0;
+                            @media(max-width:1100px){
+                              margin-right:0;  
+                            }
                             .fa-eye{
                                 font-size: 20px;
                                 margin: 1px 9px 0 0;
