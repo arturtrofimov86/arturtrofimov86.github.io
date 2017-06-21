@@ -491,9 +491,10 @@ footer{
 .news-list ul li.news-hidden{
     display:none;
     @media(max-width:1366px){
-        display:flex;
+        display:flex
+            ;
     }
-    
+
 }
 /***COMMONS****/
 .lbl-date{
@@ -769,12 +770,12 @@ h3.red-title.corner{
                         }
                         time{
                             color: #999;
-                             border-right:1px solid #109a0d;
+                            border-right:1px solid #109a0d;
 
                         }
                         a{
                             color:@white;
-                           
+
 
                         }
 
@@ -960,7 +961,7 @@ h3.red-title.corner{
                         }
                         a{
                             color:#202020;
-                            
+
                         }
                     }
                 }
@@ -971,9 +972,13 @@ h3.red-title.corner{
             max-width:1220px;
             padding:0 10px;
             margin:0 auto;
+            @media(max-width:1366px){
+                max-width:100%;
+            }
             .warning-info{
                 display:flex;
                 padding: 28px 7px 30px 7px;
+
                 @media(max-width:1200px){
                     flex-direction:column;
                 }
