@@ -465,6 +465,9 @@ footer{
             display:-webkit-inline-flex;
             -webkit-align-items:flex-start;
             margin:0 0 26px 0;
+            @media(max-width:1366px){
+                margin:0 0 20px 0;
+            }
 
             time{
                 padding: 0 14px 0 0;
@@ -484,6 +487,13 @@ footer{
             }
         }
     }
+}
+.news-list ul li.news-hidden{
+    display:none;
+    @media(max-width:1366px){
+        display:flex;
+    }
+    
 }
 /***COMMONS****/
 .lbl-date{
