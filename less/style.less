@@ -733,7 +733,7 @@ h3.red-title.corner{
                         z-index:1000;
                         width:400px;
                     }
-                     @media(max-width:480px){
+                    @media(max-width:480px){
                         width:250px;
                         max-width:250px;
                         font-size:18px;
@@ -744,6 +744,9 @@ h3.red-title.corner{
                     padding: 45px 0 0 24px;
                     @media(max-width:1600px){
                         max-width:100%;
+                    }
+                    @media(max-width:1366px){
+                        padding:38px 0 0 24px;
                     }
                     @media(max-width:1280px){
                         display:flex;
@@ -756,13 +759,15 @@ h3.red-title.corner{
                         }
                         time{
                             color: #999;
+                             border-right:1px solid #109a0d;
 
                         }
                         a{
                             color:@white;
-                            border-left:1px solid #109a0d;
+                           
 
                         }
+
                     }
                 }
             }
@@ -941,10 +946,11 @@ h3.red-title.corner{
                         time{
                             color:#666;
                             padding:0 15px 0 0;
+                            border-right:1px solid #da3131;
                         }
                         a{
                             color:#202020;
-                            border-left:1px solid #da3131;
+                            
                         }
                     }
                 }
@@ -2331,7 +2337,7 @@ h3.red-title.corner{
                             color:@black;
                             padding: 6px 30px 0 0;
                             @media(max-width:1100px){
-                              margin-right:0;  
+                                margin-right:0;  
                             }
                             .fa-eye{
                                 font-size: 20px;
@@ -2623,4 +2629,9 @@ h3.red-title.corner{
 .bx-wrapper .bx-next {
     right:24px;
     background: url('../images/arrow-right.png') no-repeat 0 0;
+}
+.page-template-home .content .news-main .news-list ul li:last-of-type{
+    @media(max-width:1366px){
+        display:none;
+    }
 }
